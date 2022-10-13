@@ -6,6 +6,12 @@ class Triangle:
         self.a = a
         self.b = b
 
+    def __repr__(self):
+        return f"Triangle(a={self.a}, b={self.b})"
+
+    def __str__(self):
+        return self.describe()
+
     def getHyp(self):
         return (self.a**2 + self.b**2) ** .5
 
@@ -18,3 +24,6 @@ class Triangle:
 
     def describe(self):
         return f'I am a triangle with sides {self.a} {self.b}'
+
+tee = Triangle(50, 60)
+print(tee)
